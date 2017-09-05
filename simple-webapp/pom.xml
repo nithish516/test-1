@@ -50,5 +50,12 @@
         </configuration>
       </plugin>
     </plugins>
+	  <distributionManagement>
+  <snapshotRepository>
+    <id>snapshots</id>
+        <name>SNAPSHOT</name>
+    <url>http://192.168.122.1:8083/manager/text</url>
+  </snapshotRepository>
+  </distributionManagement>
   </build>
 </project>
