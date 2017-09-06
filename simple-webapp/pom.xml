@@ -28,17 +28,7 @@
   <build>
     <finalName>simple-webapp</finalName>
     <plugins>
-     <plugin>
-	<groupId>org.apache.tomcat.maven</groupId>
-	<artifactId>tomcat-maven-plugin</artifactId>
-	<version>2.2</version>
-	<configuration>
-		<url>http://localhost:8083/manager/text</url>
-		<server>TomcatServer</server>
-		<path>/Simplewebapp</path>
-	</configuration>
-</plugin>
-      <plugin>
+    <plugin>
         <groupId>org.mortbay.jetty</groupId>
         <artifactId>maven-jetty-plugin</artifactId>
 	</plugin> 
@@ -51,11 +41,14 @@
       </plugin>
     </plugins>
   </build>
-  <distributionManagement>
-  <snapshotRepository>
+ <distributionManagement>
+    <repository>
+    <id>releases</id>
+    <url>http://ec2-54-224-134-182.compute-1.amazonaws.com:8081/nexus-2.14.5-02/content/repositories/releases/</url>
+    </repository>
+    <snapshotRepository>
     <id>snapshots</id>
-        <name>SNAPSHOT</name>
-    <url>http://192.168.122.1:8083/manager/text</url>
-  </snapshotRepository>
+    <url>http://ec2-54-224-134-182.compute-1.amazonaws.com:8081/nexus-2.14.5-02/content/repositories/snapshots/</url>
+    </snapshotRepository>
   </distributionManagement>
 </project>
